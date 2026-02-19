@@ -4,7 +4,7 @@ import pickle
 import zipfile
 import os
 from io import BytesIO
-import plotly.express as px
+from plotly import plotly.express as px
 
 # Заголовок приложения
 st.title("📊 Прогноз цен на нефтепродукты")
@@ -154,4 +154,5 @@ if st.button("🚀 Получить прогноз"):
                     mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
                 )
         else:
+
             st.error("Не удалось получить прогноз. Проверьте наличие моделей.")
