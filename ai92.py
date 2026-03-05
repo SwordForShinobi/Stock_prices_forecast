@@ -50,10 +50,10 @@ def run_ai92():
 
     with col2:
         price_aiton = st.number_input("Цена биржа АИ-92 (руб/тонн)", min_value=60000, max_value=100000, value=65000, step=100)
-        moex10 = st.number_input("MOEX10", min_value=4000, max_value=7000, value=5500)
-        moexog = st.number_input("MOEXOG", min_value=6000, max_value=9000, value=7500)
+        moex10 = st.number_input("MOEX10", min_value=4000, max_value=15000, value=5500)
+        moexog = st.number_input("MOEXOG", min_value=4000, max_value=15000, value=7500)
         price_urals = st.number_input("Цена Urals (USD/барр)", min_value=30.0, max_value=90.0, value=50.0, step=0.1)
-        key_rate = st.number_input("Ключевая ставка", min_value=0.05, max_value=0.25, value=0.16, step=0.001)
+        key_rate = st.number_input("Ключевая ставка", min_value=0.05, max_value=0.25, value=0.155, step=0.001)
         inflation = st.number_input("Инфляция", min_value=0.01, max_value=0.20, value=0.085, step=0.001)
 
     if st.button("Рассчитать и сделать прогноз"):
@@ -186,4 +186,5 @@ def run_ai92():
 
         # --- Показать входные данные ---
         st.subheader("Введённые данные")
+
         st.write(input_data)
