@@ -31,9 +31,9 @@ def run_ai95():
         month = st.slider("Месяц", 1, 12, 6)
 
     with col2:
-        key_rate = st.number_input("Ключевая ставка", min_value=0.05, max_value=0.25, value=0.16, step=0.001)
+        key_rate = st.number_input("Ключевая ставка", min_value=0.05, max_value=0.25, value=0.155, step=0.001)
         inflation = st.number_input("Инфляция", min_value=0.01, max_value=0.20, value=0.085, step=0.001)
-        price_aiton = st.number_input("Цена биржа АИ-95 (руб/тонн)", min_value=70000, max_value=110000, value=85000, step=100)
+        price_aiton = st.number_input("Цена биржа АИ-95 (руб/тонн)", min_value=6000, max_value=110000, value=85000, step=100)
 
 
     if st.button("Рассчитать и сделать прогноз"):
@@ -132,4 +132,5 @@ def run_ai95():
 
         # --- Показать входные данные ---
         st.subheader("Введённые данные")
+
         st.write(input_data)
