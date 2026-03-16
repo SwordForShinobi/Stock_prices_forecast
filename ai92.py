@@ -40,11 +40,11 @@ def run_ai92():
     col1, col2 = st.columns(2)
 
     with col1:
-        price_brent = st.number_input("Цена Brent (USD/барр)", min_value=40.0, max_value=100.0, value=70.0, step=0.1)
-        open_brent = st.number_input("Откр. Brent", min_value=40.0, max_value=100.0, value=69.0, step=0.1)
-        high_brent = st.number_input("Макс. Brent", min_value=40.0, max_value=100.0, value=71.0, step=0.1)
-        low_brent = st.number_input("Мин. Brent", min_value=40.0, max_value=100.0, value=68.0, step=0.1)
-        usd_rate = st.number_input("Курс доллара", min_value=60.0, max_value=120.0, value=85.0, step=0.1)
+        price_brent = st.number_input("Цена Brent (USD/барр)", min_value=40.0, max_value=500.0, value=70.0, step=0.1)
+        open_brent = st.number_input("Откр. Brent", min_value=40.0, max_value=500.0, value=69.0, step=0.1)
+        high_brent = st.number_input("Макс. Brent", min_value=40.0, max_value=500.0, value=71.0, step=0.1)
+        low_brent = st.number_input("Мин. Brent", min_value=40.0, max_value=500.0, value=68.0, step=0.1)
+        usd_rate = st.number_input("Курс доллара", min_value=60.0, max_value=500.0, value=85.0, step=0.1)
         year = st.number_input("Год", min_value=1990, max_value=2050, value=2026, step=1)
         month = st.slider("Месяц", 1, 12, 6)
 
