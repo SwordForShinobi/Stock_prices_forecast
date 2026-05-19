@@ -40,21 +40,21 @@ def run_ai92():
     col1, col2 = st.columns(2)
 
     with col1:
-        price_brent = st.number_input("Цена Brent (USD/барр)", min_value=40.0, max_value=500.0, value=70.0, step=0.1)
-        open_brent = st.number_input("Откр. Brent", min_value=40.0, max_value=500.0, value=69.0, step=0.1)
-        high_brent = st.number_input("Макс. Brent", min_value=40.0, max_value=500.0, value=71.0, step=0.1)
-        low_brent = st.number_input("Мин. Brent", min_value=40.0, max_value=500.0, value=68.0, step=0.1)
-        usd_rate = st.number_input("Курс доллара", min_value=60.0, max_value=500.0, value=85.0, step=0.1)
-        year = st.number_input("Год", min_value=1990, max_value=2050, value=2026, step=1)
+        price_brent = st.number_input("Цена Brent (USD/барр)", value=70.0, step=0.1)
+        open_brent = st.number_input("Откр. Brent", value=69.0, step=0.1)
+        high_brent = st.number_input("Макс. Brent", value=71.0, step=0.1)
+        low_brent = st.number_input("Мин. Brent", value=68.0, step=0.1)
+        usd_rate = st.number_input("Курс доллара", value=85.0, step=0.1)
+        year = st.number_input("Год", value=2026, step=1)
         month = st.slider("Месяц", 1, 12, 6)
 
     with col2:
-        price_aiton = st.number_input("Цена биржа АИ-92 (руб/тонн)", min_value=60000, max_value=100000, value=65000, step=100)
-        moex10 = st.number_input("MOEX10", min_value=4000, max_value=15000, value=5500)
-        moexog = st.number_input("MOEXOG", min_value=4000, max_value=15000, value=7500)
-        price_urals = st.number_input("Цена Urals (USD/барр)", min_value=30.0, max_value=90.0, value=50.0, step=0.1)
-        key_rate = st.number_input("Ключевая ставка", min_value=0.05, max_value=0.25, value=0.155, step=0.001)
-        inflation = st.number_input("Инфляция", min_value=0.01, max_value=0.20, value=0.085, step=0.001)
+        price_aiton = st.number_input("Цена биржа АИ-92 (руб/тонн)", value=65000, step=100)
+        moex10 = st.number_input("MOEX10", value=5500)
+        moexog = st.number_input("MOEXOG", value=7500)
+        price_urals = st.number_input("Цена Urals (USD/барр)", value=50.0, step=0.1)
+        key_rate = st.number_input("Ключевая ставка", value=0.155, step=0.001)
+        inflation = st.number_input("Инфляция", value=0.085, step=0.001)
 
     if st.button("Рассчитать и сделать прогноз"):
         # --- Сбор данных ---
